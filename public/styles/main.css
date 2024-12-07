@@ -1,0 +1,528 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #004080;
+    color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-right: 10px; 
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-links a.active {
+    color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background: url('../../assets/images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0 0 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #004080;
+    padding: 10px 25px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e6b800;
+}
+
+/* Home About Section */
+.home-about {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.home-about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.home-about p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-about strong {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Quick Links Section */
+.quick-links {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f1f1f1;
+}
+
+.quick-links h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.link-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+    padding: 20px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link-card img {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.link-card span {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    background-color: #004080;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+.footer .social-icons img {
+    height: 24px; 
+    margin: 0 15px; 
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.footer .social-icons img:hover {
+    transform: scale(1.2); 
+    filter: brightness(1) invert(0); 
+}
+
+
+.about {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: left;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mission and Vision Sections */
+.mission, .vision {
+    padding: 60px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.mission h2, .vision h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.mission p, .vision p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Achievements Section */
+.achievements {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: left;
+}
+
+.achievements h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.achievements ul {
+    list-style-type: disc;
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-left: 20px;
+}
+
+.achievements li {
+    margin-bottom: 10px;
+}
+
+/* Community Impact Section */
+.community-impact {
+    padding: 60px 20px;
+    background-color: #f1f1f1;
+    text-align: left;
+}
+
+.community-impact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.community-impact ul {
+    list-style-type: disc;
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-left: 20px;
+}
+
+.community-impact li {
+    margin-bottom: 10px;
+}
+
+
+/* Principal's Message Section */
+.principal-message {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 40px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add some more space around the letter content */
+.letter-container {
+    padding: 30px;
+}
+
+/* Formatting for the letter's greeting and body text */
+.greeting {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.intro, .message {
+    margin-bottom: 20px;
+}
+
+.closing {
+    font-size: 1.2em;
+    margin-top: 30px;
+}
+
+.closing strong {
+    font-weight: bold;
+}
+
+
+/* Contact Details Section */
+.contact-details {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.contact-details h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #004080;
+}
+
+.contact-item {
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.contact-item p,
+.contact-item a {
+    font-weight: 300;
+    color: #333;
+}
+
+.contact-item a {
+    color: #004080;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+.contact-item i {
+    font-size: 2em;
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+.contact-item .social-media-icons a {
+    font-size: 1.5em;
+    margin: 0 15px;
+    color: #004080;
+    transition: color 0.3s ease;
+}
+
+.contact-item .social-media-icons a:hover {
+    color: #ffcc00;
+}
+
+/* Map Styling */
+.contact-item iframe {
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .navbar .logo {
+        margin-bottom: 15px; /* Space between logo and navigation links */
+    }
+
+    .navbar .nav-links {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        display: flex; /* Ensure links are displayed */
+        gap: 10px;
+        margin-top: 10px; /* Space between logo and links */
+    }
+
+    .navbar .nav-links a {
+        padding: 10px 20px;
+        width: 100%; /* Make links take full width */
+        text-align: left; /* Align text to the left */
+        background-color: #004080;
+        color: #fff;
+        text-decoration: none;
+        border: 1px solid #004080;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar .nav-links a:hover,
+    .navbar .nav-links a.active {
+        background-color: #ffcc00;
+        color: #004080;
+    }
+
+    /* Optional: Add a hamburger menu style (if you have one) */
+    .navbar .hamburger-menu {
+        display: block; /* Show hamburger menu */
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .navbar .hamburger-menu div {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    /* Adjust hamburger icon when active (optional) */
+    .navbar.active .hamburger-menu div:nth-child(1) {
+        transform: rotate(45deg);
+        transform-origin: 1px;
+    }
+
+    .navbar.active .hamburger-menu div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar.active .hamburger-menu div:nth-child(3) {
+        transform: rotate(-45deg);
+        transform-origin: 1px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .links-container {
+        flex-direction: column;
+    }
+
+    .link-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .home-about p {
+        font-size: 1em;
+    }
+
+    .about h2, .mission h2, .vision h2 {
+        font-size: 2em;
+    }
+
+    .about p, .mission p, .vision p {
+        font-size: 1em;
+    }
+
+    .achievements h2, .community-impact h2 {
+        font-size: 2em;
+    }
+
+    .achievements ul, .community-impact ul {
+        font-size: 1em;
+    }
+
+    .principal-message {
+        padding: 20px;
+        font-size: 1em;
+    }
+
+    .greeting {
+        font-size: 1.8em;
+    }
+
+    .intro, .message {
+        font-size: 1.1em;
+    }
+
+    .closing {
+        font-size: 1.1em;
+    }
+
+    .contact-details {
+        padding: 40px 15px;
+    }
+
+    .contact-details h2 {
+        font-size: 2.2em;
+    }
+
+    .contact-item p {
+        font-size: 1em;
+    }
+
+    .contact-item .social-media-icons a {
+        font-size: 1.3em;
+    }
+    
+}
