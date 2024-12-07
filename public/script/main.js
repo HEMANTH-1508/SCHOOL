@@ -1,18 +1,14 @@
-// Navigation active link handling
 document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll(".nav-links a");
 
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
-            // Remove active class from all links
             navLinks.forEach(nav => nav.classList.remove("active"));
-            // Add active class to the clicked link
             link.classList.add("active");
         });
     });
 });
 
-// Smooth scroll (optional for internal links)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
         e.preventDefault();
@@ -22,4 +18,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+<script>
+    function checkAdminAccess() {
+        fetch("http://localhost:YOUR_PORT_HERE/admin/login.html")
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = "http://localhost:YOUR_PORT_HERE/admin/login.html";
+                } else {
+                    window.location.href = "index.html"; 
+                }
+            })
+            .catch(error => {
+                window.location.href = "index.html"; 
+            });
+    }
+
+    document.getElementById("admin-link").addEventListener("click", function (event) {
+        event.preventDefault(); 
+        checkAdminAccess(); 
+    });
+</script>
 
